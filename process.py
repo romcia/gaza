@@ -1,1 +1,4 @@
-print("Hi from python") 
+import sys
+
+for line in sys.stdin:
+  print(line)
