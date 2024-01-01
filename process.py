@@ -1,6 +1,6 @@
 import sys
 import datetime
-now = datetime.now()
+now = datetime.datetime.now()
 title = "Data on killed and injured Palestinians in Gaza since 07/10/23"
 subtitle = f"Data captured on {now}"
 
