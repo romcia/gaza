@@ -15,6 +15,9 @@ jobs:
     - name: Fetch latest data
       run: |-
         curl -L https://docs.google.com/spreadsheets/d/1TNL1kx13vPC6KmpB8CFeEqjjj-ea7DP6X4BFOGsD_ew/export?exportFormat=csv >data.csv
+    - name: Process latest data
+      run: |-
+        python process.py <data.csv >index.html
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
