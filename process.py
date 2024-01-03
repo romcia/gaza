@@ -11,8 +11,10 @@ def main():
 
     try:
         # Read the CSV file into a DataFrame
-        data = pd.read_csv('data.csv')
-        print(data.to_html(index=False))  # Convert the DataFrame to HTML for display
+        data = pd.read_csv("data.csv")
+        f = open("index.html", "w")
+        f.write(data.to_html(index=False)) 
+        f.close()
     except Exception as e:
         print(f"Error reading data: {e}")
 
