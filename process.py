@@ -13,8 +13,8 @@ def main():
         with open(
             "index.html", "w"
         ) as f:  # with avoids needing to explicitly close file
-            f.write(f"<h1>{title}</h1>")
-            f.write(f"<h2>{subtitle}</h2>")
+            f.write(f"<h1>{title}</h1>\n")
+            f.write(f"<h2>{subtitle}</h2>\n")
             f.write(data.to_html(index=False))
     except Exception as e:
         print(f"Error reading data: {e}")
